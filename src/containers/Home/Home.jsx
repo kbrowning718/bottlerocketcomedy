@@ -4,15 +4,8 @@ import { ScrollableSection } from "../../components";
 import { useState } from "react";
 
 export const Home = () => {
-  const [scrollTop, setScrollTop] = useState(0);
-
-  const handleScroll = () => {
-    setScrollTop(window.scrollY);
-    console.log(window.scrollY);
-  }
-
   return (
-    <div className="home-container" onScroll={(e) => handleScroll(e)}>
+    <div className="home-container">
       <ScrollableSection>
         <Hero></Hero>
       </ScrollableSection>

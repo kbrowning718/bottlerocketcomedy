@@ -8,6 +8,7 @@
     text-align: center;
     animation: fadeIn 1.5s ease-in-out;
     width: 100%;
+    scroll-snap-align: center;
 }
 
 .animate-me {
