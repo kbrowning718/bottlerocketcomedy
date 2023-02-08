@@ -2,13 +2,23 @@ import "./Hero.css";
 import { useState } from "react";
 import { useEffect } from "react";
 
-export const Hero = () => {
+export const Hero = ({
+  img,
+  headline,
+  text
+}) => {
 
   return (
 
     <div className="hero-container">
-      <img src="https://i.ibb.co/vsv1FpM/BRC.jpg"></img>
-
+      <div className="headline-wrapper"
+      >
+        <h1>{headline}</h1>
+        <h3>{text}</h3>
+      </div>
+      <div className="hero-img-wrapper">
+        <img src={img}></img>
+      </div>
 
     </div>
 

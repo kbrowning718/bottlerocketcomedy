@@ -2,39 +2,16 @@
     background: linear-gradient(-145deg, #DECAB6, 5%, #DECAB6, #C58469);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     z-index: 1;
     height: 100vh;
-    font-size: 5rem;
     color: #0056a7;
 }
 
-.animate-me {
-    animation: bounceIn 3s ease-in-out;
+.headline-wrapper {
+    text-align: left;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes bounceIn {
-    0% {
-        transform: scale(0.1);
-        opacity: 0;
-    }
-
-    60% {
-        transform: scale(1.2);
-        opacity: 1;
-    }
-
-    100% {
-        transform: scale(1);
-    }
+.hero-img-wrapper {
+    border: 1px solid blue;
 }
