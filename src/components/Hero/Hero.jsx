@@ -1,26 +1,33 @@
 import "./Hero.css";
 import { useState } from "react";
 import { useEffect } from "react";
+import homeImage from "../../images/homepage.jpg";
+
 
 export const Hero = ({
   img,
   headline,
-  text
+  text, bgImage
 }) => {
+
 
   return (
 
     <div className="hero-container">
-      <div className="headline-wrapper"
-      >
-        <h1>{headline}</h1>
-        <h3>{text}</h3>
-      </div>
-      <div className="hero-img-wrapper">
-        <img src={img}></img>
-      </div>
 
-    </div>
+      <div className="bg-img" style={{ backgroundImage: `url(${img})` }}> </div>
+
+
+      <div className="headline-wrapper">
+        <div className="text-wrapper">
+
+          <h1 className="hero-header">{headline}</h1>
+          <h3 className="hero-subhead">{text}</h3>
+        </div>
+      </div>
+    </div >
+
+
 
   );
 };

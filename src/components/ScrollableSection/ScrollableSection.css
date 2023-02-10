@@ -4,8 +4,6 @@
     flex-direction: column;
     position: relative;
     color: #eee;
-    z-index: -1;
-    text-align: center;
     animation: fadeIn 1.5s ease-in-out;
     width: 100%;
     scroll-snap-align: center;
