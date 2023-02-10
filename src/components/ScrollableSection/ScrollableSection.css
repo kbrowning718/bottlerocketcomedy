@@ -5,14 +5,13 @@
     position: relative;
     color: #eee;
     animation: fadeIn 1.1s ease-in;
-    width: 100%;
     scroll-snap-align: center;
 }
 
-.animate-me {
+/* .animate-me {
 
     animation: bounceIn 3s ease-in-out;
-}
+} */
 
 @keyframes fadeIn {
     from {
