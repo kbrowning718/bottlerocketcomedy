@@ -2,12 +2,13 @@ import "./Hero.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import homeImage from "../../images/homepage.jpg";
+import { Button } from "../../components";
 
 
 export const Hero = ({
   img,
   headline,
-  text, bgImage
+  text, children
 }) => {
 
 
@@ -22,10 +23,15 @@ export const Hero = ({
         <div className="text-wrapper">
 
           <h1 className="hero-header">{headline}</h1>
-          <h3 className="hero-subhead">{text}</h3>
+          <p className="hero-subhead">{text}</p>
+          {children}
+
         </div>
       </div>
+
     </div >
+
+
 
 
 
