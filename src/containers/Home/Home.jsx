@@ -4,7 +4,7 @@ import { ScrollableSection } from "../../components";
 import { Navigation } from "../../components";
 import homeImage from "../../images/homepage.jpg";
 import { Button } from "../../components";
-import { Calendar } from "../../components";
+import { CalendarContainer } from "../../components";
 
 export const Home = () => {
   return (
@@ -21,7 +21,7 @@ export const Home = () => {
       </ScrollableSection>
 
       <ScrollableSection>
-        <Calendar></Calendar>
+        <CalendarContainer></CalendarContainer>
       </ScrollableSection>
 
       <ScrollableSection>
