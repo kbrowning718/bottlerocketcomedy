@@ -20,17 +20,31 @@ export const CalendarContainer = () => {
   const [eventData, setEventData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [date, setDate] = useState(new Date());
+  const [selectedEvent, setSelectedEvent] = useState([]);
 
   useEffect(() => {
     setLoading(true);
     const data = getEvents().then((data) => {
-      setEventData(data);
+      setEventData(data.events);
       setLoading(false);
     });
   }, []);
 
   const handleDayClick = (date) => {
-    console.log(date);
+    const filteredEvents = eventData.filter((item) => {
+      const options = {
+        day: "numeric",
+        year: "numeric",
+        month: "2-digit",
+      };
+      const startDate = new Date(item.start.utc).toLocaleDateString(
+        "en",
+        options
+      );
+      const clickedDate = new Date(date).toLocaleDateString("en", options);
+      return startDate === clickedDate;
+    });
+    setSelectedEvent(filteredEvents);
   };
 
   return (
@@ -51,9 +65,17 @@ export const CalendarContainer = () => {
           {loading ? (
             <span>Looking for events...</span>
           ) : (
-            <span>{eventData?.events?.name?.html}</span>
+            <span>
+              {selectedEvent.map((date, idx) => {
+                return <p key={idx}>{date?.name?.html}</p>;
+              })}
+            </span>
           )}
-          <p>{getDateString(eventData?.start?.utc)}</p>
+          <span>
+            {selectedEvent.map((date, idx) => {
+              return <p key={idx}>{date?.url}</p>;
+            })}
+          </span>
         </div>
       </div>
     </div>
