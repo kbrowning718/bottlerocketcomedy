@@ -4,42 +4,41 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
-    border: 1px solid;
-
   }
 
   .calendar-sidebar-container {
     display: flex;
-    border: 1px solid;
-    gap: 25px;
+    gap: 5%;
     align-items: center;
-    height: 50%;
-  width: 50%;
+  width: 80%;
+  justify-content: center;
   }
   
-  .calendar {
-    background-color: #fff;
-max-height: 100%;
-    width: 50%;
-    box-shadow: 4px 3px 10px 0px rgba(0,0,0,0.32);
-    padding: 20px;
-  }
   
   .calendar-sidebar-wrapper {
-    height: 100%;
     border:1px solid;
-    width: 50%;
+    height: 300px;
+    max-height: 60%;
+    width: 350px;
+   max-width: 35%;
+   padding: 20px;
+  }
+
+  .selected-date-text {
+    font-size: .7em;
   }
 
 /* React Calendar Styles */
 
 .react-calendar {
-  width: 350px;
+  width: 450px;
   max-width: 100%;
-  background: white;
+  background: #fff;
   border: 1px solid #a0a096;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Oxygen", sans-serif;
+  box-shadow: 4px 3px 10px 0px rgba(0,0,0,0.32);
   line-height: 1.125em;
+  padding: 20px;
 }
 .react-calendar--doubleView {
   width: 700px;

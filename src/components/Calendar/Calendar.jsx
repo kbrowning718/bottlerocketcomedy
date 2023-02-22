@@ -7,6 +7,7 @@ import { eventbrite } from "../../api/eventbrite.js";
 import { getDateString } from "../../helper.js";
 import { organization_id } from "../../consts.js";
 import Calendar from "react-calendar";
+import { EventDetails } from "../../components";
 
 const getEvents = async () => {
   const response = await eventbrite.get(
@@ -42,40 +43,40 @@ export const CalendarContainer = () => {
         options
       );
       const clickedDate = new Date(date).toLocaleDateString("en", options);
+
       return startDate === clickedDate;
     });
     setSelectedEvent(filteredEvents);
+    console.log(filteredEvents);
   };
 
   return (
     <div className="calendar-container">
       <div className="calendar-sidebar-container">
-        <Calendar
-          className="calendar"
-          onClickDay={handleDayClick}
-          onChange={setDate}
-          date={date}
-        />
+        <Calendar onClickDay={handleDayClick} onChange={setDate} date={date} />
         <div className="calendar-sidebar-wrapper">
-          <h3>Upcoming Events:</h3>
-          <p>
-            <span className="bold">{date.toDateString()}</span>
-          </p>
-          <p>Event Name:</p>
-          {loading ? (
-            <span>Looking for events...</span>
-          ) : (
-            <span>
-              {selectedEvent.map((date, idx) => {
-                return <p key={idx}>{date?.name?.html}</p>;
-              })}
-            </span>
-          )}
-          <span>
-            {selectedEvent.map((date, idx) => {
-              return <p key={idx}>{date?.url}</p>;
-            })}
-          </span>
+          <div className="sidebar-header-container">
+            <h3>Upcoming Events:</h3>
+            <p className="selected-date-text">
+              Events schedule for{" "}
+              <span className="bold">{date.toDateString()}</span>
+            </p>
+          </div>
+          <div className="sidebar-events-container">
+            {loading ? (
+              <span>Looking for events...</span>
+            ) : selectedEvent.length > 0 ? (
+              <span>
+                {selectedEvent.map((date, idx) => {
+                  return (
+                    <EventDetails date={date} label="Find Tickets" key={idx} />
+                  );
+                })}
+              </span>
+            ) : (
+              <p> No events found.</p>
+            )}
+          </div>
         </div>
       </div>
     </div>
