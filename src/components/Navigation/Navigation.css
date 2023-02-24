@@ -24,6 +24,7 @@ header {
   display: inline-block;
   position: relative;
   width: auto;
+  cursor: pointer;
 }
 
 .hover-underline-animation:after {
@@ -53,4 +54,5 @@ header {
 .hover-underline-animation:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+  cursor: pointer;
 }

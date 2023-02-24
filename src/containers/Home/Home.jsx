@@ -16,7 +16,11 @@ export const Home = () => {
           headline="Bottle Rocket Comedy"
           text="Comedy Collective producing AMAZING shows in Baltimore & DC"
         >
-          <Button className="hero-cta" buttonText="Search For Tickets"></Button>
+          <Button
+            buttonLink="https://www.eventbrite.com/o/bob-smith-60714778103"
+            className="hero-cta"
+            buttonText="Search For Tickets"
+          ></Button>
         </Hero>
       </ScrollableSection>
 

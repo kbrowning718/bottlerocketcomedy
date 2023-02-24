@@ -1,10 +1,12 @@
 import "./Button.css";
 import { Link } from "react-router-dom";
 
-export const Button = ({ buttonText }) => {
+export const Button = ({ buttonText, buttonLink }) => {
   return (
     <button className="button">
-      <Link className="button-text">{buttonText}</Link>
+      <a className="button-text" href={buttonLink}>
+        {buttonText}
+      </a>
     </button>
   );
 };

@@ -5,7 +5,10 @@ html {
 body {
   margin: 0;
   font-family: "Oxygen", sans-serif;
+  overflow: hidden;
+  color-scheme: dark;
 }
+
 
 /* h1 {
   font-size: 4rem;

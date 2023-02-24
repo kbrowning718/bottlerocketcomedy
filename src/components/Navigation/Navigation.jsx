@@ -5,15 +5,15 @@ export const Navigation = () => {
   return (
     <header>
       <div className="floating-nav-container">
-        <Link className="nav-link hover-underline-animation" to="/">
+        <a className="nav-link hover-underline-animation" to="/">
           Home
-        </Link>
-        <Link className="nav-link hover-underline-animation" to="/">
+        </a>
+        <a className="nav-link hover-underline-animation" to="/">
           Upcoming Shows
-        </Link>
-        <Link className="nav-link hover-underline-animation" to="/">
+        </a>
+        <a className="nav-link hover-underline-animation" to="/">
           Contact
-        </Link>
+        </a>
       </div>
     </header>
   );
