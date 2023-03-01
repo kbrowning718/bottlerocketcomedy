@@ -5,12 +5,14 @@ import { Navigation } from "../../components";
 import homeImage from "../../images/homepage.jpg";
 import { Button } from "../../components";
 import { CalendarContainer } from "../../components";
+import { useEffect } from "react";
+import { useState } from "react";
 
 export const Home = () => {
   return (
     <div className="home-container">
       <Navigation></Navigation>
-      <ScrollableSection>
+      <ScrollableSection id="home">
         <Hero
           img={homeImage}
           headline="Bottle Rocket Comedy"
@@ -24,11 +26,11 @@ export const Home = () => {
         </Hero>
       </ScrollableSection>
 
-      <ScrollableSection>
+      <ScrollableSection id="upcoming-events">
         <CalendarContainer></CalendarContainer>
       </ScrollableSection>
 
-      <ScrollableSection>
+      <ScrollableSection id="contact">
         <Hero></Hero>
       </ScrollableSection>
     </div>

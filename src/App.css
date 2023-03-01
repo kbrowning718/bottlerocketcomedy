@@ -2,6 +2,11 @@ html {
   overflow: hidden;
 }
 
+html::-webkit-scrollbar { 
+display: none;
+}
+
+
 body {
   margin: 0;
   font-family: "Oxygen", sans-serif;
@@ -9,21 +14,3 @@ body {
   color-scheme: dark;
 }
 
-
-/* h1 {
-  font-size: 4rem;
-  margin: 0;
-}
-
-h2 {
-  font-weight: 500;
-}
-
-h3,
-h4,
-h5 {
-  font-weight: 400;
-  letter-spacing: .3rem;
-
-
-} */

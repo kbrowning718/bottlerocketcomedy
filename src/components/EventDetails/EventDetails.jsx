@@ -21,7 +21,7 @@ export const EventDetails = ({ date, label }) => {
         <p className="event-summary">{date?.summary}</p>
       </div>
       <div className="event-url-container">
-        <a className="event-url" href={date?.url}>
+        <a target="_blank" className="event-url" href={date?.url}>
           {label}
         </a>
       </div>

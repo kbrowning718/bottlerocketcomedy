@@ -3,4 +3,7 @@
   width: 100%;
   overflow: auto;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
+
+
