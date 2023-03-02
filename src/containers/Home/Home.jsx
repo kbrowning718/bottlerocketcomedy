@@ -5,8 +5,6 @@ import { Navigation } from "../../components";
 import homeImage from "../../images/homepage.jpg";
 import { Button } from "../../components";
 import { CalendarContainer } from "../../components";
-import { useEffect } from "react";
-import { useState } from "react";
 
 export const Home = () => {
   return (

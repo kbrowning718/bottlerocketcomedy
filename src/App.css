@@ -1,16 +1,16 @@
-html {
-  overflow: hidden;
-}
-
-html::-webkit-scrollbar { 
-display: none;
-}
-
-
 body {
   margin: 0;
   font-family: "Oxygen", sans-serif;
-  overflow: hidden;
   color-scheme: dark;
+  overflow: hidden;
+  height: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
 }
+
+
+
+
+
 
